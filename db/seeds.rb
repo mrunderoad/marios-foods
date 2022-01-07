@@ -10,7 +10,12 @@
 Product.destroy_all
 Review.destroy_all
 
-15.time do |index|
-  product = Product.create!({name: Faker:: :: })
-  100.times do |index|
-    REview.create!({name: Faker:: .name, product_id: product_id })
+50.time do |index|
+  product = Product.create!({name: Faker::Superhero.random})
+  250.times do |index|
+    Review.create!({name: Faker::Name.name, product_id: product_id })
+  end
+end
+
+p "Created #{Product.count} products."
+p "Created #{Review.count} reviews."
