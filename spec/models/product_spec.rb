@@ -3,7 +3,7 @@ require 'rails_helper'
 describe Product do
   it { should have_many(:reviews) }
   describe "#titleize_product" do
-    it "will capitilize the product name"
+    it "will capitilize the product name" do
       product = Product.create({name: "pizza"})
       expect(project.name()).to(eq("Pizza"))
     end
