@@ -48,7 +48,7 @@ class ProductsController < ApplicationRecord
 
   private
   def product_params
-    params.require(:product).permit(:name. :origin. :cost)
+    params.require(:product).permit(:name, :origin, :cost)
   end
 
 end

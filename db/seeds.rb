@@ -5,3 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+Product.destroy_all
+Review.destroy_all
+
+15.time do |index|
+  product = Product.create!({name: Faker:: :: })
+  100.times do |index|
+    REview.create!({name: Faker:: .name, product_id: product_id })
