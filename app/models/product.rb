@@ -8,6 +8,16 @@ class Product < ApplicationRecord
   validates_length_of :name, maximum: 50
   before_save(:titleize_product)
 
+  scope :most_reviews, -> {(
+    select("products.id, products.name, products.cost, products.origin, count(reviews.id) as reviews_count")
+    .joins(:reviews)
+    .group("products.id")
+    .order("tasks_count DESC")
+    .limit(1)
+  )}
+
+  scope :three_most_recent, -> { order(created_at: :desc).limit(3)}
+  
   private
     def titleize_product
       self.name = self.name.titleize
