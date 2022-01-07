@@ -4,8 +4,8 @@ class Review < ApplicationRecord
   validates :rating, presence: true
   validates :rating, numericality: { in: 1..5 }
   validates :content_body, presence: true
-  validates_length_of :content_body, length: { in 50..250 }
-  validates_length_of :author, maximun: 50
+  validates_length_of :content_body { in: 50..250 }
+  validates_length_of :author, maximum: 50
   before_save(:titleize_review)
 
   private
