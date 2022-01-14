@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe "deleting a review"
+describe "deleting a review" do
   it "deletes a review" do
     visit products_path
     click_link 'Add a new product!'

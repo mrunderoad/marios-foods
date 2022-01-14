@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe "deleteing a product"
+describe "deleteing a product" do
   it "deletes a product" do
     visit products_path
     click_link "Add a new product!"
