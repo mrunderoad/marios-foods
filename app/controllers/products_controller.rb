@@ -1,9 +1,10 @@
 class ProductsController < ApplicationRecord
-include Devise::Controllers::Helpers
+
+  include Devise::Controllers::Helpers
+
   before_action :only => [:new, :edit] do
     redirect_to new_user_session_path unless current_user && current_user.admin
   end
-
 
   def index
     @products = Product.all
