@@ -1,0 +1,10 @@
+<% if user_signed_in? %>
+  <%= link_to "View Products", user_products_path(current_user) %>
+  <% @users.each do |user| %>
+    
+    <% user.products.each do |gallery| %>
+      <p><%= link_to product.name, user_product_path(user, product) %></p>
+      
+    <% end %>
+  <% end %>
+<% end %>
