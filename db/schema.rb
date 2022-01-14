@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 2022_01_14_170642) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "reviews", id: :bigint, default: -> { "nextval('songs_id_seq'::regclass)" }, force: :cascade do |t|
+  create_table "reviews", id: :bigint, default: -> { "nextval('reviews_id_seq'::regclass)" }, force: :cascade do |t|
     t.string "author"
     t.string "content_body"
     t.integer "rating"
