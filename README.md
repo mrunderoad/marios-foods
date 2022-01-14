@@ -2,7 +2,7 @@
 ##### By Isaac Overstreet
 
 ## Description
-This is an application to mimic a specialty food webpage with products and reviews for each product.
+This is an application to mimic a specialty food webpage with products and reviews for each product. As well as admin privileges for CRUD functionality.  
 
 ## Technologies Used
 * Ruby
